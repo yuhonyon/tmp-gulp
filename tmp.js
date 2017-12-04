@@ -59,10 +59,10 @@ function allRender(config){
 }
 
 function tmp(config){
-  config.vuex=config.vuex==='n'?false:true;
-  config.router=config.router==='n'?false:true;
-  config.e2e=config.e2e==='n'?false:true;
-
+  config.server=config.server==='n'?false:true;
+  config.md5=config.md5==='n'?false:true;
+  config.html=config.html==='n'?false:true;
+  config.img=config.img==='n'?false:true;
   allRender(config)
 
   copy(resolve("./"),'./'+config.name).then(()=>{

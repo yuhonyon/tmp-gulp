@@ -1,5 +1,5 @@
 const fs = require('fs-extra');
-const tmp=[
+const config=[
   {
     message: '请输入项目名',
     default: 'my-gulp-roject',
@@ -26,28 +26,20 @@ const tmp=[
   },
   {
     message: '使用postcss',
-    type: 'postcss',
+    type: 'checkbox',
     name: 'style',
     choices: [
-      {name: 'pxtorem(px转rem,默认75px>1rem)',value: 'pxtorem',checked: true},
-      {name: 'autoprefixer(自动加前缀)',value: 'autoprefixer',checked: true},
-      {name: 'cssnext(css4,包含autoprefixer)',value: 'cssnext',checked: true},
-      {name: 'precss(仿sass语法)',value: 'precss',checked: true},
-      {name: 'cssnano(css优化)',value: 'cssnano',checked: true},
+      {name: 'pxtorem(px转rem,默认75px>1rem)',value: 'pxtorem',checked: false},
+      {name: 'autoprefixer(自动加前缀)',value: 'autoprefixer',checked: false},
+      {name: 'cssnext(css4,包含autoprefixer)',value: 'cssnext',checked: false},
+      {name: 'precss(仿sass语法)',value: 'precss',checked: false},
+      {name: 'cssnano(css优化)',value: 'cssnano',checked: false},
       {name: 'assets(公共路径,插入图片尺寸,内联文件)',value: 'assets',checked: false},
-      {name: 'sprites(生成雪碧图及样式)',value: 'sprites',checked: true}
-    ]
-  },
-  {
-    type: 'input',
-    name: 'md5',
-    message: '添加md5去缓存',
-    default: 'y',
-    validate: function(value) {
-      if (/^[yn]$/.test(value)) {
-        return true;
-      }
-      return '请输出y或者n';
+      {name: 'sprites(生成雪碧图及样式)',value: 'sprites',checked: false}
+    ],
+    when: function(answers) {
+
+      return [121]
     }
   },
   {
@@ -92,7 +84,18 @@ const tmp=[
         value: false
       }
     ]
-  },{
+  },  {
+      type: 'input',
+      name: 'md5',
+      message: '添加md5去缓存',
+      default: 'y',
+      validate: function(value) {
+        if (/^[yn]$/.test(value)) {
+          return true;
+        }
+        return '请输出y或者n';
+      }
+    },{
       type: 'input',
       name: 'server',
       message: '本地服务器(自动刷新)',
@@ -106,4 +109,4 @@ const tmp=[
     }
 ];
 
-module.exports=tmp;
+module.exports=config;
