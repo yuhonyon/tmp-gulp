@@ -21,13 +21,7 @@ const tmp=[
     name: 'style',
     choices: [
       {name: 'sass',checked: true},
-      {name: 'pxtorem(px转rem,默认75px>1rem)',value: 'pxtorem',checked: true},
-      {name: 'autoprefixer(自动加前缀)',value: 'autoprefixer',checked: true},
-      {name: 'cssnext(css4,包含autoprefixer)',value: 'cssnext',checked: true},
-      {name: 'precss(仿sass语法)',value: 'precss',checked: true},
-      {name: 'cssnano(css优化)',value: 'cssnano',checked: true},
-      {name: 'assets(公共路径,插入图片尺寸,内联文件)',value: 'assets',checked: false},
-      {name: 'sprites(生成雪碧图及样式)',value: 'sprites',checked: true}
+      {name: 'less'}
     ]
   },
   {
@@ -35,8 +29,13 @@ const tmp=[
     type: 'postcss',
     name: 'style',
     choices: [
-      {name: '不使用',checked: true,value: false},
-      {name: 'postcss-css'}
+      {name: 'pxtorem(px转rem,默认75px>1rem)',value: 'pxtorem',checked: true},
+      {name: 'autoprefixer(自动加前缀)',value: 'autoprefixer',checked: true},
+      {name: 'cssnext(css4,包含autoprefixer)',value: 'cssnext',checked: true},
+      {name: 'precss(仿sass语法)',value: 'precss',checked: true},
+      {name: 'cssnano(css优化)',value: 'cssnano',checked: true},
+      {name: 'assets(公共路径,插入图片尺寸,内联文件)',value: 'assets',checked: false},
+      {name: 'sprites(生成雪碧图及样式)',value: 'sprites',checked: true}
     ]
   },
   {
