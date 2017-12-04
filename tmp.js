@@ -60,12 +60,6 @@ function allRender(config){
 }
 
 function tmp(config){
-  console.log(config);
-  config.server=config.server!=='n';
-  config.md5=config.md5!=='n';
-  config.html=config.html!=='n';
-  config.img=config.img!=='n';
-
   if(config.js!=='webpack'){
     remove(resolve('./webpack.config.js'));
   }
