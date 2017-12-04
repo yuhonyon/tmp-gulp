@@ -25,7 +25,6 @@ function render(config,src,json){
       config
   });
   if(json){
-    console.log(info);
     info=JSON.stringify(JSON.parse(info),null, 2);
   }else{
     info=info.replace(/[\n\r]{2,10}/g,'\n');
@@ -67,6 +66,7 @@ function tmp(config){
   copy(resolve("./"),'./'+config.name).then(() => {
     remove('./'+config.name+'/tmp.js');
     remove('./'+config.name+'/tmpConfig.js');
+    console.log('-------生成完成------');
   });
 }
 module.exports=tmp;
