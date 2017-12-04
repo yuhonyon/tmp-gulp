@@ -39,7 +39,7 @@ const config=[
     ],
     when: function(answers) {
 
-      return [121]
+      return [121];
     }
   },
   {
@@ -80,11 +80,15 @@ const config=[
         value: 'browserify'
       },
       {
+        name: '普通模式',
+        value: true
+      },
+      {
         name: '不使用',
         value: false
       }
     ]
-  },  {
+  }, {
       type: 'input',
       name: 'md5',
       message: '添加md5去缓存',

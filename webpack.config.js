@@ -2,10 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: __dirname + '/template/js/index.js',
+  entry: __dirname +config.from+ '/'+config.name'.js',
   output: {
-    path: __dirname + '/lib/js/',
-    filename: 'template.min.js'
+    path: __dirname + config.to,
+    filename: config.name+'.min.js'
   },
   devtool: 'inline-source-map',
   module: {
