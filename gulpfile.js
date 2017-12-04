@@ -108,7 +108,7 @@ gulp.task('js', function() {
         .pipe(gulp.dest(dist));
 });
 
-<%if(config.js===webpack){%>
+<%if(config.js==='webpack'){%>
 gulp.task('webpack', function(cb) {
     let config = Object.create(webpackConfig);
 
