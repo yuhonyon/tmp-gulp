@@ -17,10 +17,11 @@ const config=[
   },
   {
     message: '打包预编译样式',
-    type: 'checkbox',
+    type: 'list',
     name: 'style',
+    default: 'sass',
     choices: [
-      {name: 'sass',checked: true},
+      {name: 'sass'},
       {name: 'less'}
     ]
   },
@@ -38,32 +39,19 @@ const config=[
       {name: 'sprites(生成雪碧图及样式)',value: 'sprites',checked: false}
     ],
     when: function(answers) {
-
       return [121];
     }
   },
   {
-    type: 'input',
+    type: 'confirm',
     name: 'html',
     message: '打包html',
-    default: 'y',
-    validate: function(value) {
-      if (/^[yn]$/.test(value)) {
-        return true;
-      }
-      return '请输出y或者n';
-    }
+    default: true
   }, {
-      type: 'input',
+      type: 'confirm',
       name: 'img',
       message: '打包图片img',
-      default: 'y',
-      validate: function(value) {
-        if (/^[yn]$/.test(value)) {
-          return true;
-        }
-        return '请输出y或者n';
-      }
+      default: true
     },
   {
     type: 'list',
@@ -80,37 +68,20 @@ const config=[
         value: 'browserify'
       },
       {
-        name: '普通模式',
-        value: true
-      },
-      {
         name: '不使用',
         value: false
       }
     ]
   }, {
-      type: 'input',
+      type: 'confirm',
       name: 'md5',
       message: '添加md5去缓存',
-      default: 'y',
-      validate: function(value) {
-        if (/^[yn]$/.test(value)) {
-          return true;
-        }
-        return '请输出y或者n';
-      }
+      default: true
     },{
-      type: 'input',
+      type: 'confirm',
       name: 'server',
       message: '本地服务器(自动刷新)',
-      default: 'y',
-      validate: function(value) {
-        if (/^[yn]$/.test(value)) {
-          return true;
-        }
-        return '请输出y或者n';
-      }
+      default: true
     }
 ];
-
 module.exports=config;
