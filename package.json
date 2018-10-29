@@ -29,6 +29,9 @@
     "eslint-plugin-html": "^2.0.3",
     "gulp": "^3.9.1",
     "gulp-asset-rev": "0.0.15",
+    
+    "gulp-less": "3.2.15",
+    
     "gulp-babel": "^6.1.2",
     "gulp-cache": "^0.2.9",
     "gulp-changed": "^2.0.0",

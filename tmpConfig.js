@@ -18,7 +18,7 @@ const config=[
   {
     message: '打包预编译样式',
     type: 'list',
-    name: 'style',
+    name: 'css',
     default: 'sass',
     choices: [
       {name: 'sass'},
