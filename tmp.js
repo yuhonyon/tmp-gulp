@@ -17,7 +17,7 @@ function render(config){
         reject()
         return;
       }
-      console.log(files)
+
       for(let file of files){
         let template=fs.readFileSync(pathResolve(file), 'utf8');
         let result=ejs.render(template, config);
